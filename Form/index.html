@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <title>Form</title>
+  </head>
+  <body>
+    <form name="myForm"  onsubmit="return validateForm()" method="post" >
+      <h2>Personal Details:</h2>
+      <div class="row">
+        <label class="field_label">Name:</label>
+        <input type="text" id="name" name="name" onkeyup="NameValidation()"  minlength="3" maxlength="25" />
+      </div>
+      <div class="error" id="nameErr"></div>
+      <br /><br />
+      <div class="row">
+        <label class="field_label">Mobile Number:</label>
+        <input type="tel" id="number" name="number" minlength="10" onkeyup="NumberValidation()"  />
+      </div>
+      <div class="error" id="numberErr"></div>
+      
+      <br /><br />
+      <div class="row">
+        <label class="field_label">DOB:</label>
+        <input type="date" id="DOB" name="DOB" />
+      </div>
+      <div class="error" id="DOBErr"></div>
+      <br /><br />
+      <div class="row">
+        <label class="field_label">Gender:</label>
+        <input type="radio" value="male" id="male" />
+        <label for="male">Male</label>
+        <input type="radio" value="female" id="female"  />
+        <label for="male">Female</label>
+      </div>
+      <div class="error" id="genderErr"></div>
+      <br /><br />
+      <div class="row">
+        <label class="field_label">Favourite Games:</label>
+        <input type="checkbox" name="hobbies"/>
+        <label for="Baminton">Baminton</label>
+        <input type="checkbox" value="Cricket" />
+        <label for="Baminton">Cricket</label>
+        <input type="checkbox" value="Basketball" />
+        <label for="Baminton">Basketball</label>
+        <input type="checkbox" value="VolleyBall" />
+        <label for="Baminton">VolleyBall</label>
+        <input type="checkbox" value="FootBall" />
+        <label for="Baminton">FootBall</label>
+      </div> 
+      <div class="error" id="HobbiesErr"></div>
+    </br></br>
+    <div class="row">
+      <input type="submit" value="submit"/>
+    </div>
+    </form>
+    <div id="output"></div>
+    <table id="myTable">
+      <tr>
+        <th>Name</th>
+        <th>Contact Number</th> 
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>Action</th>
+      </tr>
+      <tableBody id="tabledata">
+      <tr>
+        <td>cc </td>
+        <td> qq </td> 
+        <td>aa</td>
+        <td>bb</td>
+        <td><button class="btn">Delete</button></td>
+      </tr>
+    </tableBody>
+</table>
+  </body>
+</html>
